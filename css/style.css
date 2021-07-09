@@ -494,6 +494,7 @@ figure.cl {
 }
 
 .background {
+  width: 100%;
   background: url("../images/фишки2.png")-50px 0 no-repeat;
   background-size: 100%;
   padding: 150px 0;
