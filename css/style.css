@@ -139,18 +139,33 @@ input, textarea {
 html {
   font-family: Roboto;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #1C0836;
-  background-image: url("../images/фишки2.png") no-repeat;
-  background-position: bottom;
-  background-size: 100%;
+  overflow-x: hidden;
 }
 
-header {
-  height: 180px;
+@media (max-width: 1099.5px) {
+  header {
+    padding: 0 40px;
+  }
+}
+header .logo img {
+  width: 350px;
   padding: 44px 0;
+}
+@media (max-width: 370px) {
+  header .logo img {
+    width: 94%;
+  }
+}
+
+@media (max-width: 680px) {
+  .chip_second, .chip_first {
+    display: none;
+  }
 }
 
 .container {
@@ -158,9 +173,19 @@ header {
   padding: 0 15px;
   margin: 0 auto;
 }
+@media (max-width: 1099.5px) {
+  .container {
+    padding: 0;
+  }
+}
 
 .main {
-  margin-top: -170px;
+  margin-top: -330px;
+}
+@media (max-width: 1099.5px) {
+  .main {
+    margin-top: -750px;
+  }
 }
 
 .header {
@@ -171,6 +196,13 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+}
+@media (max-width: 680px) {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .box {
@@ -188,29 +220,101 @@ header {
   -webkit-animation: animate 5s linear infinite;
           animation: animate 5s linear infinite;
 }
+@media (max-width: 1099.5px) {
+  .box i {
+    font-size: 100px;
+  }
+}
+@media (max-width: 1099.5px) {
+  .box .diamond {
+    font-size: 50px;
+  }
+}
 .box i.chip {
   position: relative;
   top: 200px;
-  left: -600px;
+  left: -43%;
+}
+@media (max-width: 1099.5px) {
+  .box i.chip {
+    top: 400px;
+    left: -35%;
+  }
 }
 .box i.d2 {
   position: relative;
   top: 170px;
-  right: -600px;
+  right: -43%;
+}
+@media (max-width: 1099.5px) {
+  .box i.d2 {
+    top: 550px;
+    right: -35%;
+  }
 }
 .box i.ch2 {
   position: relative;
   top: 400px;
 }
+@media (max-width: 1099.5px) {
+  .box i.ch2 {
+    top: 0;
+    right: -30%;
+  }
+}
 .box i.d3 {
   position: relative;
-  top: 650px;
-  left: -530px;
+  top: 300px;
+  left: -38%;
+}
+@media (max-width: 1099.5px) {
+  .box i.d3 {
+    top: 600px;
+    right: 25%;
+  }
 }
 .box i.ch3 {
   position: relative;
   top: 500px;
-  right: -530px;
+  right: -38%;
+}
+@media (max-width: 1099.5px) {
+  .box i.ch3 {
+    top: 750px;
+    right: -30%;
+  }
+}
+.box i.ch4 {
+  position: relative;
+  top: 700px;
+}
+@media (max-width: 1099.5px) {
+  .box i.ch4 {
+    top: 900px;
+    left: -30%;
+  }
+}
+.box i.ch5 {
+  position: relative;
+  top: 900px;
+  left: -43%;
+}
+@media (max-width: 1099.5px) {
+  .box i.ch5 {
+    top: 1400px;
+    left: -35%;
+  }
+}
+.box i.d4 {
+  position: relative;
+  top: 950px;
+  right: -43%;
+}
+@media (max-width: 1099.5px) {
+  .box i.d4 {
+    top: 1100px;
+    right: -38%;
+  }
 }
 
 @-webkit-keyframes animate {
@@ -244,12 +348,37 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media (max-width: 1099.5px) {
+  .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1099.5px) {
+  .cards_wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 figure {
   width: 350px;
   height: 350px;
   position: relative;
   margin-bottom: 60px;
+}
+@media (max-width: 460px) {
+  figure {
+    width: 260px;
+    height: 260px;
+  }
 }
 
 figure.bb {
@@ -324,10 +453,23 @@ figure.cl {
   font-size: 20px;
   font-weight: 500;
 }
+@media (max-width: 460px) {
+  .cards_text {
+    font-size: 16px;
+  }
+}
 .cards_text p {
   line-height: 35px;
   width: 300px;
   text-align: center;
+}
+@media (max-width: 460px) {
+  .cards_text p {
+    width: 240px;
+  }
+}
+.cards_text img {
+  height: 20px;
 }
 
 .appeal {
@@ -344,4 +486,25 @@ figure.cl {
   padding-bottom: 90px;
   font-weight: 700;
   font-style: italic;
+}
+@media (max-width: 370px) {
+  .appeal h1 {
+    font-size: 30px;
+  }
+}
+
+.background {
+  background: url("../images/фишки2.png")-50px 0 no-repeat;
+  background-size: 100%;
+  padding: 120px 0;
+}
+@media (max-width: 1100px) {
+  .background {
+    background-position: -30px 0;
+  }
+}
+@media (max-width: 600px) {
+  .background {
+    padding-bottom: 30px;
+  }
 }
