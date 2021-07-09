@@ -264,7 +264,7 @@ header .logo img {
 }
 .box i.d3 {
   position: relative;
-  top: 300px;
+  top: 400px;
   left: -38%;
 }
 @media (max-width: 1099.5px) {
@@ -496,15 +496,15 @@ figure.cl {
 .background {
   background: url("../images/фишки2.png")-50px 0 no-repeat;
   background-size: 100%;
-  padding: 120px 0;
+  padding: 150px 0;
+}
+@media (max-width: 1000px) {
+  .background {
+    padding-bottom: 30px;
+  }
 }
 @media (max-width: 1100px) {
   .background {
     background-position: -30px 0;
-  }
-}
-@media (max-width: 600px) {
-  .background {
-    padding-bottom: 30px;
   }
 }
