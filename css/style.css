@@ -144,7 +144,6 @@ html {
 
 body {
   background-color: #1C0836;
-  overflow-x: hidden;
 }
 
 @media (max-width: 1099.5px) {
@@ -494,10 +493,9 @@ figure.cl {
 }
 
 .background {
-  width: 100%;
   background: url("../images/фишки2.png")-50px 0 no-repeat;
-  background-size: 100%;
-  padding: 150px 0;
+  background-size: cover;
+  padding: 120px 0 150px 0;
 }
 @media (max-width: 1000px) {
   .background {
